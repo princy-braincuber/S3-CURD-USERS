@@ -2,12 +2,12 @@ service: s3-file-api
 
  provider:
   name: aws
-  runtime: node 16.x
-  stage:dev
+  runtime: nodejs16.x
+  stage: dev
   region: as-east-1
   apiNmae: ${self:service}
-  memorySize:128
-  timeout:10
+  memorySize: 128
+  timeout: 10
   enviroment:
     FILE_UPLOAD_BUCKET_NAME: ${self:custom.fileBucketName}
 plugins:
